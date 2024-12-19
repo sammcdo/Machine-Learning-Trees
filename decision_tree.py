@@ -12,7 +12,7 @@ class DecisionTree:
         """
         self.Xs = Xs
         self.ys = ys
-        self.Xs['$target$'] = self.ys
+        self.Xs['$target$'] = self.ys.iloc[:, 0]
         self.classes = list(set(self.ys.iloc[:, 0]))
         self.tree = self._buildTree(Xs)
     
